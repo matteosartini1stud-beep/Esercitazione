@@ -11,28 +11,30 @@ namespace Es_classi
         // Attributi
         private string titolo;
         private string autore;
-        private int numeroTracce;
+        private List<string> listaBrani;
         private double durataTotale; // in minuti
         // Costruttore
-        public Cd(string titolo, string autore, int numeroTracce, double durataTotale)
+        public Cd(string titolo, string autore, List<string> listaBrani, double durataTotale)
         {
             this.titolo = titolo;
             this.autore = autore ;
-            this.numeroTracce = numeroTracce;
+            this.listaBrani = listaBrani;
             this.durataTotale = durataTotale;
         }
         // Metodi Getter
-        public string GetTitolo()
+        public string Titolo
         {
-            return titolo;
+            set{ titolo = value; }
+            get{ return titolo; }
         }
-        public string GetAutore()
+        public string Autore
         {
-            return autore;
+            set{ autore = value; }
+            get{ return autore; }
         }
-        public int GetNumeroTracce()
+        public List<string> GetListaBrani()
         {
-            return numeroTracce;
+            return listaBrani;
         }
         public double GetDurataTotale()
         {
@@ -43,7 +45,7 @@ namespace Es_classi
         {
             Console.WriteLine("Titolo: " + titolo);
             Console.WriteLine("Artista: " + autore);
-            Console.WriteLine("Numero di Tracce: " + numeroTracce);
+            Console.WriteLine("Lista Brani: " + listaBrani);
             Console.WriteLine("Durata Totale: " + durataTotale + " minuti");
         }
     }
